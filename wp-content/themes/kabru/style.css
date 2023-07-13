@@ -1,0 +1,136 @@
+/*
+Theme Name: Kabru
+Theme URI: 
+Author: 
+Description: A WordPress Full Site Editing theme named Kabru is designed to take full advantage of WordPress's Full Site Editing capabilities, providing users with extensive control over the entire website layout, design, and content. It enables users to customize and edit every aspect of their website, including headers, footers, sidebars, templates, and individual page elements, without the need for coding or advanced technical skills. The theme empowers users to create unique and visually stunning websites by offering a wide range of customizable blocks, templates, and styling options. With Kabru, users can craft a personalized website that reflects their brand while ensuring a seamless and intuitive editing experience 
+Requires at least: 6.0
+Tested up to: 6.2
+Requires PHP: 5.6
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Tags: block-patterns, block-styles, blog, custom-background, custom-colors, custom-logo, custom-menu, editor-style, full-site-editing, grid-layout, one-column, photography, portfolio, template-editing, threaded-comments, translation-ready, wide-blocks
+Text Domain: kabru
+*/
+
+
+.wp-site-blocks>*+* {
+    margin-block-start: 0;
+}
+
+.has-box-shadow {
+    box-shadow: 2px 4px 25px 0px rgb(0 0 0 / 10%);
+}
+
+.img-full-height .wp-block-image,
+.img-full-height .wp-block-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.no-list-style {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.no-list-style li a {
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 0.6rem;
+}
+
+/* Buttons */
+
+.wp-block-button>.wp-block-button__link {
+    border: 2px solid transparent;
+}
+
+/* Default Button */
+.wp-block-button.is-style-fill>.wp-block-button__link {
+    border-color: var(--wp--preset--color--primary);
+}
+
+.wp-block-button>.wp-block-button__link:hover,
+.wp-block-button.is-style-fill>.wp-block-button__link:hover {
+    border: 2px solid var(--wp--preset--color--primary);
+}
+
+/* Outline Button */
+.wp-block-button.is-style-outline>.wp-block-button__link,
+.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color) {
+    background-color: transparent;
+    border-color: var(--wp--preset--color--primary);
+    padding: 0.8rem 2rem;
+    color: var(--wp--preset--color--primary);
+}
+
+.wp-block-button.is-style-outline>.wp-block-button__link:hover {
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--secondary);
+}
+
+/* No Outline Button */
+.wp-block-button.is-style-no-outline>.wp-block-button__link {
+    border-color: var(--wp--preset--color--primary);
+    background: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--secondary);
+}
+
+.wp-block-button.is-style-no-outline:hover>.wp-block-button__link {
+    background: var(--wp--preset--color--tertiary);
+    border-color: var(--wp--preset--color--tertiary);
+}
+
+/* Drop Shadow Button */
+.wp-block-button.is-style-drop-shadow>.wp-block-button__link {
+    box-shadow: 2px 2px 4px 2px rgb(0 0 0 / 30%);
+}
+
+/* Rounded Button */
+.wp-block-button.is-style-rounded>.wp-block-button__link {
+    border-radius: 10px;
+}
+
+.wp-block-button.is-style-rounded>.wp-block-button__link:hover {
+    color: var(--wp--preset--color--tertiary);
+    border: 2px solid var(--wp--preset--color--tertiary);
+    background-color: var(--wp--preset--color--secondary) !important;
+}
+
+/* Rounded Drop Shadow Button */
+.wp-block-button.is-style-rounded-drop-shadow>.wp-block-button__link {
+    box-shadow: 2px 2px 4px 2px rgb(0 0 0 / 30%);
+    border-radius: 10px;
+}
+
+/* HEADER */
+header .wp-block-navigation__container a.wp-block-navigation-item__content {
+    position: relative;
+}
+
+header .wp-block-navigation__container a.wp-block-navigation-item__content::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--wp--preset--color--primary);
+    transition: all 0.25s ease-in-out;
+}
+
+header .wp-block-navigation__container a.wp-block-navigation-item__content:hover {
+    text-decoration: none;
+}
+
+header .wp-block-navigation__container a.wp-block-navigation-item__content:hover::before {
+    width: 100%;
+}
+
+/* FEATURED ITEM CARD */
+.feat-item-card.pull-up-section {
+    position: relative;
+    top: -150px;
+    background: #fff;
+}
