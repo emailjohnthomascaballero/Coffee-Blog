@@ -18,6 +18,12 @@ This website blog is all about "WHY IS COFFEE SO FAMOUS?".
 
 I tried hosted it on 000webhost.com, a free hosting platform. It provides a reliable and convenient environment to showcase the blog and make it accessible to visitors from anywhere.
 
+## WordPress Admin Login
+
+On the login page, enter the following credentials:
+   - Username: admin
+   - Password: password
+
 ## Plugins Used
 
 The following plugins were utilized to enhance the functionality of this website:
